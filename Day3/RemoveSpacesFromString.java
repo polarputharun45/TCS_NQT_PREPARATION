@@ -5,7 +5,7 @@ public class RemoveSpacesFromString {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter string");
         String s=sc.nextLine();
-        System.out.println(s.replace(" ",));
+        System.out.println(s.replace(" ",""));
 
     }
 }
