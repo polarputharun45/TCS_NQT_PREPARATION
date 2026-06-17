@@ -42,16 +42,123 @@ public class CreateLinkedListAndAddElementsAndPrint {
             
         }
         System.out.println("linked list");
+        int count=0;
+        
+
+        // Node temp = head;
+
+        // while(temp!=null){
+        //     System.out.print(temp.data+" >- ");
+        //     count++;
+        //     temp=temp.next;
+
+        // }
+
+        // System.out.println("count  "+count+ "  null");
+
+
+
+        // int sum=0;
+
+        // temp = head;
+
+        // while(temp!=null){
+        //     sum+=temp.data;
+        //     temp=temp.next;
+            
+        // }
+        // System.out.println("sum " + sum);
+
+
+        // Node temp = head;
+        // int max= head.data;
+
+        // while(temp!=null){
+        //     if(temp.data>max){
+        //         max=temp.data;
+
+        //     }
+        //     temp=temp.next;
+        // }
+        // System.out.println("max "+max);
+
+
+        // Node temp = head;
+
+        // int key =30;
+        
+        // while(temp!=null){
+        //     if(temp.data==key){
+        //         System.out.println("found");
+        //         break;
+        //     }
+        //     temp = temp.next;
+        // }
+
+ 
+        
+        // Node temp= head;
+        // int min=temp.data;
+        // while(temp!=null){
+        //     if(temp.data<min){
+        //         min=temp.data;
+        //     }
+
+        //     temp=temp.next;
+        // }
+        // System.out.println("min "+min);
+
+
+
+
+        Node prev =null;
+        Node curr = head;
+
+        while(curr!=null){
+            Node next =curr.next;
+            curr.next= prev;
+            prev = curr;
+            curr= next;
+
+        }
+        head=prev;
+
+
+
+
+        // Print Reversed List
+        System.out.println("Reversed Linked List:");
 
         Node temp = head;
 
-        while(temp!=null){
-            System.out.print(temp.data+" >- ");
-            temp=temp.next;
-
+        while(temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
         }
 
-        System.out.print("null");
+        // Find Middle Element
+
+Node slow = head;
+Node fast = head;
+
+while(fast != null && fast.next != null){
+    slow = slow.next;
+    fast = fast.next.next;
+}
+
+System.out.println("Middle Element: " + slow.data);
+
+
+
+
+
+        
+
+
+
+
+
+        
 
 
 
